@@ -18,11 +18,11 @@ FILENAME="$DIR/latest.${DIST}";
 
 if test -e "$FILENAME"; then
     rm $FILENAME;
-    echo "Removed last downloaded version."
+    echo "Removed last downloaded version.";
 fi
 
 echo "Downloading latest version of vscode is starting...";
-wget $URLBASE -o $FILENAME;
+wget --output $FILENAME $URLBASE;
 printf "Downloading finished.\n\n";
 
 echo "Closing vscode...";
@@ -38,5 +38,5 @@ fi
 echo "Installation finished.";
 
 echo "Starting new version of vscode...";
-code &;
+code . &;
 exit;
