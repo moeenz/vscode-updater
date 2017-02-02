@@ -4,10 +4,8 @@ DIST="";
 
 if [ "$OS" = "Ubuntu" ] || [ "$OS" = "Debian" ]; then
     DIST="deb";
-    echo "Debian based";
 elif [ "$OS" = "Fedora" ] || [ "$OS" = "Red Hat" ] || [ "$OS" = "Red hat" ]; then
     DIST="rpm";
-    echo "Red hat based";
 else
     echo "Unfortunately your operating system is not supported in distributed packages.";
     exit;
@@ -22,7 +20,7 @@ if test -e "$FILENAME"; then
 fi
 
 echo "Downloading latest version of vscode is starting...";
-wget --output $FILENAME $URLBASE;
+wget --show-progress -O $FILENAME $URLBASE;
 printf "Downloading finished.\n\n";
 
 echo "Closing vscode...";
@@ -38,5 +36,5 @@ fi
 echo "Installation finished.";
 
 echo "Starting new version of vscode...";
-code . &;
+code . &
 exit;
