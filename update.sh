@@ -16,8 +16,12 @@ fi
 URLBASE="https://vscode-update.azurewebsites.net/latest/linux-${DIST}-x64/stable";
 FILENAME="$DIR/latest.${DIST}";
 
+if test -e "$FILENAME"; then
+    rm $FILENAME;
+    echo "Removed last downloaded version."
+fi
+
 echo "Downloading latest version of vscode is starting...";
-rm $FILENAME;
 wget $URLBASE -o $FILENAME;
 printf "Downloading finished.\n\n";
 
