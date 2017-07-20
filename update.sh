@@ -36,5 +36,5 @@ fi
 echo "Installation finished.";
 
 echo "Starting new version of vscode...";
-code . &
+code &
 exit;
