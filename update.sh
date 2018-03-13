@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 OS=$(lsb_release -si);
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
 DIST="";
