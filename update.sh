@@ -13,7 +13,7 @@ else
     exit;
 fi
 
-URLBASE="https://vscode-update.azurewebsites.net/latest/linux-${DIST}-x64/stable";
+URLBASE="https://update.code.visualstudio.com/latest/linux-${DIST}-x64/stable";
 FILENAME="$DIR/latest.${DIST}";
 
 if test -e "$FILENAME"; then
