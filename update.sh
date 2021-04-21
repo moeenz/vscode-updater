@@ -13,7 +13,7 @@ else
     exit;
 fi
 
-URLBASE="https://update.code.visualstudio.com/latest/linux-${DIST}-x64/stable";
+URLBASE="https://code.visualstudio.com/sha/download?build=stable&os=linux-${DIST}-x64";
 FILENAME="$DIR/latest.${DIST}";
 
 if test -e "$FILENAME"; then
