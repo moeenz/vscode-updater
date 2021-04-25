@@ -23,6 +23,10 @@ fi
 
 echo "Downloading latest version of vscode is starting...";
 wget --show-progress -O $FILENAME $URLBASE;
+if [ $? -ne 0 ]; then
+    echo "Failed to download."
+    exit 1
+fi
 printf "Downloading finished.\n\n";
 
 echo "Closing vscode...";
